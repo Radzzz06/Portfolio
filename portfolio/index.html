@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radhika sahu—Portfolio</title>
+  <meta name="description" content="Personal website of Radhika sahu, student at IIIT Hyderabad.">
+  <meta property="og:title"      content="Radhika sahu— Portfolio">
+  <meta property="og:description" content="Making a personal website for Radhika sahu">
+  <meta property="og:type"        content="website">
+
+  <!-- Preload the LCP image to start download immediately -->
+  <link rel="preload" as="image" href="images/pfp.jpg" fetchpriority="high">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Main navigation -->
+  <nav class="nav" aria-label="Main navigation">
+
+    <a href="index.html" class="nav__logo">
+     Radzzz<span class="text-muted">.exe</span>
+    </a>
+
+    <ul class="nav__links">
+      <li><a href="index.html"    class="nav__link active" aria-current="page">HOME</a></li>
+      <li><a href="about.html"    class="nav__link">ABOUT</a></li>
+      <li><a href="projects.html" class="nav__link">PROJECTS</a></li>
+      <li><a href="contact.html"  class="nav__link">CONTACT</a></li>
+      <li>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Switch to light theme"
+          aria-pressed="false"
+        >
+          🌙 DARK
+        </button>
+      </li>
+    </ul>
+
+  </nav>
+
+  <main id="main" class="page-wrapper">
+    <section class="hero" aria-label="Introduction">
+
+      <div class="hero__greeting">
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted);">
+          &gt; USER.EXE — PLAYER 1 HAS ENTERED
+        </p>
+      </div>
+
+      <div class="hero__name">
+        <h1>
+          <span class="hero-name-text glow">
+            Radhika<br>Sahu
+          </span>
+        </h1>
+
+        <p class="text-muted mt-8" style="font-size: var(--text-xs); line-height: 2.5;">
+          ROLL NO: 2025101079 &nbsp;|&nbsp; IIIT HYDERABAD
+        </p>
+      </div>
+      <div class="hero__typed" aria-live="polite" aria-atomic="true">
+        <span class="typed-wrapper">
+          <span class="typed-text" id="typed-target"></span>
+          <span class="typed-cursor" aria-hidden="true"></span>
+        </span>
+        <div
+          id="typed-strings"
+          aria-hidden="true"
+          style="display: none;"
+          data-strings='[
+            "STUDENT @ IIIT HYDERABAD","CPU: 99.83% logic, 0.17% WHATTT??","GHUNGROOS GROUNDING THE SYSTEM LOAD","ADRENALINE FUELED, LOGIC DRIVEN"]'
+        ></div>
+      </div>
+
+      <!-- Hero image -->
+      <div class="hero__pixel-art">
+          <img
+          src="images/pfp.jpg"
+          alt="Photo of Radhika"
+          class="pixel-avatar scanlines"
+          width="500"
+          height="500"
+          fetchpriority="high"
+          decoding="sync"
+        >
+        </div>
+    </section>
+
+    <section class="section reveal" aria-labelledby="skills-heading">
+      <h2 class="section__title" id="skills-heading">SKILLS.JSON</h2>
+
+      <ul class="skills-grid" aria-label="Skills list">
+
+        <li class="skill-card skill-card--featured">
+          <p class="skill-card__name" role="heading" aria-level="3">
+            LEARNING ENTHUSIAST
+          </p>
+          <p class="skill-card__level">
+            Fueled by 'WHATTT??', driven by 'How?' <br> My learning journey has been a series of 'crashes' and 'booms,'
+             from the strict study halls of my 8th-grade hostel to the high-pressure labs of IIIT Hyderabad. I don't 
+             just want the answer; I want the story, the logic, and the 'Aha!' moment that makes my heart race like 
+             I'm back on that paraglider.
+          </p>
+        </li>
+
+        <li class="skill-card">
+          <p class="skill-card__name" role="heading" aria-level="3">C intermediate</p>
+          <p class="skill-card__level">Still gotta lot to learn but yes understood basics which make me capable of using other languages while knowing the underlying logic</p>
+        </li>
+
+        <li class="skill-card">
+          <p class="skill-card__name" role="heading" aria-level="3">Python beginner</p>
+          <p class="skill-card__level">libraries like numpy and matplotlib fascinates me, also found them helpful in Linear algebra</p>
+        </li>
+
+        <li class="skill-card">
+          <p class="skill-card__name" role="heading" aria-level="3">C++ beginner</p>
+          <p class="skill-card__level">Want to try competitive programming some day, so trying to learn the best</p>
+        </li>
+
+        <li class="skill-card">
+          <p class="skill-card__name" role="heading" aria-level="3">Hardware enthusiast</p>
+          <p class="skill-card__level">Using arduinos and rasberry pi for four years, made maglev mini project, Physics always made me question everything!</p>
+        </li>
+
+        <li class="skill-card">
+          <p class="skill-card__name" role="heading" aria-level="3">Socialising </p>
+          <p class="skill-card__level">I know somewhat random, but those little conversations and realising how wonderful the world is, 
+            pushes me to work more and get to learn more, to explore more </p>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Projects section -->
+    <section class="section reveal" aria-labelledby="projects-cta-heading">
+      <h2 class="section__title" id="projects-cta-heading">PROJECTS[]</h2>
+
+      <p class="text-muted mb-8" style="font-size: var(--text-xs); line-height: 2.5;">
+        &gt; ALL OF MY PROJECTS SO FAR, NOT TOO GREAT BUT YEAH STILL LEARNING
+      </p>
+
+      <a href="projects.html" class="btn pulse">
+        VIEW ALL PROJECTS →
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Radhika_sahu Made with lot of 🫶🏻</p>
+    <p class="mt-4" style="font-size: 8px;">
+      IIIT HYDERABAD &nbsp;|&nbsp; ROLL: 2025101079
+    </p>
+  </footer>
+  <script src="js/theme.js"  type="module"></script>
+  <script src="js/typed.js"  type="module"></script>
+  <script src="js/scroll.js" type="module"></script>
+
+</body>
+</html>

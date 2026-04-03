@@ -1,0 +1,166 @@
+/* Hero entry sequence */
+.hero__pixel-art {
+  animation: slideFromRight 400ms ease both;
+  animation-delay: 0ms;
+}
+
+.hero__greeting {
+  animation: slideFromLeft 600ms ease both;
+  animation-delay: 150ms;
+}
+
+.hero__name {
+  animation: slideFromBottom 600ms ease both;
+  animation-delay: 300ms;
+}
+
+.hero__typed {
+  animation: fadeIn 600ms ease both;
+  animation-delay: 500ms;
+}
+
+/* Base entrance keyframes */
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Scroll reveal keyframe */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typed cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Subtle glitch effect on hero name */
+.hero-name-text {
+  display: inline-block;
+  animation: glitch 8s infinite;
+  will-change: text-shadow;
+}
+
+@keyframes glitch {
+  0%  { text-shadow:  3px 0 0 var(--color-primary),   -3px 0 0 var(--color-secondary); }
+  10% { text-shadow: -3px 0 0 var(--color-primary),    3px 0 0 var(--color-secondary); }
+  20% { text-shadow:  3px 0 0 var(--color-secondary), -3px 0 0 var(--color-primary); }
+  30% { text-shadow:  0 3px 0 var(--color-primary); }
+  40% { text-shadow: -3px 0 0 var(--color-secondary),  3px 0 0 var(--color-primary); }
+  50% { text-shadow:  3px 0 0 var(--color-primary),   -3px 0 0 var(--color-secondary); }
+  60% { text-shadow: none; }
+  70% { text-shadow: -3px 0 0 var(--color-primary),    3px 0 0 var(--color-secondary); }
+  100%{ text-shadow:  3px 0 0 var(--color-primary),   -3px 0 0 var(--color-secondary); }
+}
+
+/* Nav bar slide-in on page load */
+.nav {
+  animation: slideFromTop 400ms ease both;
+}
+
+@keyframes slideFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card re-appear animation after filter changes */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* Pulse ring for CTA buttons */
+@keyframes pixelPulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--color-transparent); }
+  50%       { box-shadow: 0 0 0 8px var(--color-primary-alpha-25); }
+}
+
+.pulse {
+  animation: pixelPulse 2s ease infinite;
+}
+
+/* CRT-style scanline overlay */
+.scanlines {
+  position: relative;
+}
+
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--color-transparent) 0px,
+    var(--color-transparent) 2px,
+    var(--color-black-alpha-15) 2px,
+    var(--color-black-alpha-15) 4px
+  );
+  pointer-events: none;
+}
+
+/* Small bounce keyframe (available for typing indicators) */
+@keyframes typingBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
+}

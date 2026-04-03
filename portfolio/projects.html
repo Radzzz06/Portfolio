@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Radhika sahu</title>
+  <meta name="description" content=" Projects by Radhika sahu — list of work and experiments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Main navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo">
+      Radzzz<span class="text-muted">.exe</span>
+    </a>
+
+    <ul class="nav__links">
+      <li><a href="index.html"    class="nav__link">HOME</a></li>
+      <li><a href="about.html"    class="nav__link">ABOUT</a></li>
+      <li><a href="projects.html" class="nav__link active" aria-current="page">PROJECTS</a></li>
+      <li><a href="contact.html"  class="nav__link">CONTACT</a></li>
+      <li>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Switch to light theme"
+          aria-pressed="false"
+        >🌙 DARK</button>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main" class="page-wrapper">
+
+    <header class="page-header">
+      <h1>PROJECTS.DIR</h1>
+      <p class="page-header__subtitle">
+        &gt; THINGS I HAVE BUILT SO FAR
+      </p>
+    </header>
+
+    <section
+      class="filter-bar"
+      aria-label="Filter projects by technology"
+      id="filter-bar"
+    >
+      <span class="filter-bar__label" id="filter-label">FILTER:</span>
+
+      <button
+        class="filter-btn active"
+        data-tag="all"
+        aria-pressed="true"
+        aria-describedby="filter-label"
+      >ALL</button>
+
+      <button class="filter-btn" data-tag="C" aria-pressed="false">C</button>
+      <button class="filter-btn" data-tag="Python" aria-pressed="false">Python</button>
+      <button class="filter-btn" data-tag="CSS" aria-pressed="false">CSS</button>
+      <button class="filter-btn" data-tag="HTML" aria-pressed="false">HTML</button>
+      <button class="filter-btn" data-tag="Java_Script" aria-pressed="false">Java_Script</button>
+    </section>
+
+    <section aria-labelledby="projects-list-heading">
+      <h2 class="visually-hidden" id="projects-list-heading">Projects list</h2>
+
+      <ul class="projects-grid" id="projects-grid">
+
+        <!-- Project 1 -->
+        <li
+          class="project-card reveal"
+          data-tags="C"
+        >
+          <h3 class="project-card__title">
+            The game - TWIXT
+          </h3>
+          <p class="project-card__desc">
+            Twixt is a "connection" board game played on a grid of holes, the goal is to create a continuous path under constraints.
+          </p>
+
+          <div class="project-card__detail">
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-2); font-size: var(--text-xs);">
+              WHY I BUILT IT ?
+            </p>
+            <p>
+              It was Computer programming's course project and I got to learn how to implement Dynamic programming in depth.
+            </p>
+
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-2); font-size: var(--text-xs); margin-top: var(--space-4);">
+              WHAT I'D DO DIFFERENTLY ?
+            </p>
+            <p>
+              Try to make it more attractive by adding animations and colours.
+            </p>
+
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-2); font-size: var(--text-xs); margin-top: var(--space-4);">
+              TECH TRADEOFFS
+            </p>
+            <p>
+              Used 2-D arrays which made it difficult to store, should have used bitboards.
+            </p>
+          </div>
+
+        <div class="project-card__tags">
+          <span class="tag"> C </span>
+          </div>
+        </li>
+
+        <!-- Project 2 -->
+        <li
+          class="project-card reveal"
+          data-tags="C"
+        >
+          <h3 class="project-card__title">C unplugged</h3>
+
+          <p class="project-card__desc">
+            Made a small prototype of Spotify using C language, that uses a chain-link structure to handle songs.
+            Instead of a rigid list, it uses Linked Lists to "hook" songs together, allowing you to add, remove, 
+            or reorder tracks instantly without moving everything else around. By using a Modularity, I
+            did split the program into independent workstations one for the linking logic.
+          </p>
+
+          <div class="project-card__detail">
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-2); font-size: var(--text-xs);">
+              WHY I BUILT IT ?
+            </p>
+            <p>Again it was a course project, but it definitely deepen my understanding of data structures.</p>
+
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-2); font-size: var(--text-xs); margin-top: var(--space-4);">
+              WHAT I'D DO DIFFERENTLY ?
+            </p>
+            <p>I will definitely try to use UI features as it worked just on terminal only.</p>
+
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-2); font-size: var(--text-xs); margin-top: var(--space-4);">
+              TECH TRADEOFFS ?
+            </p>
+            <p>Made it acessible on terminal only, which destroyed the UI</p>
+          </div>
+
+          <div class="project-card__tags">
+            <span class="tag">C</span>
+          </div>
+        </li>
+
+        <!-- Project 3 -->
+        <li
+          class="project-card reveal"
+          data-tags="HTML Java_Script CSS"
+        >
+          <h3 class="project-card__title">PERSONAL WEBSITE</h3>
+
+          <p class="project-card__desc">
+            Made a personal website for assignment and portfolio purposes using HTML,CSS and vanilla Java script. 
+            It represents me, my hobbies, my interest and my projects.It was super fun to understand the working 
+            concepts of website and how every page is linked.
+          </p>
+
+          <div class="project-card__detail">
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-2); font-size: var(--text-xs);">
+              WHY I BUILT IT
+            </p>
+            <p>Assignment but the one which made me have a taste of real world projects.</p>
+
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-2); font-size: var(--text-xs); margin-top: var(--space-4);">
+              WHAT I'D DO DIFFERENTLY
+            </p>
+            <p>The next time I would like to add custom made animations and also graphics to make it more customised.</p>
+
+            <p style="color: var(--color-secondary); margin-bottom: var(--space-2); font-size: var(--text-xs); margin-top: var(--space-4);">
+              TECH TRADEOFFS
+            </p>
+            <p>Used pretty basic tools and animations available, will jump into more complex tools.</p>
+          </div>
+
+          <div class="project-card__tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Java_Script</span>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <p
+      id="no-results"
+      style="display: none; color: var(--color-text-muted); font-size: var(--text-xs);
+             text-align: center; padding: var(--space-12); line-height: 2.5;"
+      role="status"
+      aria-live="polite"
+    >
+      &gt; NO PROJECTS MATCH THAT FILTER. TRY ANOTHER TAG :p.
+    </p>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Radhika sahu — IIIT HYDERABAD</p>
+  </footer>
+
+  <script src="js/theme.js"  type="module"></script>
+  <script src="js/filter.js" type="module"></script>
+  <script src="js/scroll.js" type="module"></script>
+
+</body>
+</html>

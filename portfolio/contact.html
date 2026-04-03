@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Radhika sahu</title>
+  <meta name="description" content="The page to share contact information">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Main navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo" aria-label="Home">
+      Radzzz<span class="text-muted">.exe</span>
+    </a>
+
+    <ul class="nav__links">
+      <li><a href="index.html"    class="nav__link">HOME</a></li>
+      <li><a href="about.html"    class="nav__link">ABOUT</a></li>
+      <li><a href="projects.html" class="nav__link">PROJECTS</a></li>
+      <li><a href="contact.html"  class="nav__link active" aria-current="page">CONTACT</a></li>
+      <li>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Switch to light theme"
+          aria-pressed="false"
+        >🌙 DARK</button>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main" class="page-wrapper">
+
+    <header class="page-header">
+      <h1>CONTACT.SH</h1>
+      <p class="page-header__subtitle">
+        &gt; SEND A MESSAGE — ALL FIELDS REQUIRED
+      </p>
+    </header>
+
+    <section class="contact-layout section reveal" aria-label="Contact section">
+
+      <div>
+        <form
+          aria-label="Contact form"
+          id="contact-form"
+          class="contact-form"
+          onsubmit="return false;"
+        >
+          <h2 class="section__title">SEND_MESSAGE()</h2>
+
+          <!-- NAME FIELD -->
+          <div class="form-field">
+            <label for="field-name">NAME *</label>
+            <input
+              type="text"
+              id="field-name"
+              name="name"
+              placeholder="YOUR GOOD NAME"
+              autocomplete="name"
+              aria-required="true"
+              aria-describedby="error-name"
+            >
+            <span
+              class="field-error"
+              id="error-name"
+              role="alert"
+              aria-live="polite"
+            >
+              &gt; ERROR: NAME CANNOT BE EMPTY
+            </span>
+          </div>
+
+          <!-- EMAIL FIELD -->
+          <div class="form-field">
+            <label for="field-email">EMAIL *</label>
+            <input
+              type="email"
+              id="field-email"
+              name="email"
+              placeholder="your_email@example.com"
+              autocomplete="email"
+              aria-required="true"
+              aria-describedby="error-email"
+            >
+            <span
+              class="field-error"
+              id="error-email"
+              role="alert"
+              aria-live="polite"
+            >
+              &gt; ERROR: ENTER A VALID EMAIL ADDRESS
+            </span>
+          </div>
+
+          <!-- SUBJECT FIELD -->
+          <div class="form-field">
+            <label for="field-subject">SUBJECT *</label>
+            <input
+              type="text"
+              id="field-subject"
+              name="subject"
+              placeholder="HELLO! Let's talk"
+              aria-required="true"
+              aria-describedby="error-subject"
+            >
+            <span
+              class="field-error"
+              id="error-subject"
+              role="alert"
+              aria-live="polite"
+            >
+              &gt; ERROR: SUBJECT CANNOT BE EMPTY
+            </span>
+          </div>
+
+          <!-- MESSAGE FIELD -->
+          <div class="form-field">
+            <label for="field-message">MESSAGE * (MIN 20 CHARS)</label>
+            <textarea
+              id="field-message"
+              name="message"
+              rows="6"
+              placeholder="So what is this all about"
+              aria-required="true"
+              aria-describedby="error-message"
+            ></textarea>
+            <span
+              class="field-error"
+              id="error-message"
+              role="alert"
+              aria-live="polite"
+            >
+              &gt; ERROR: MESSAGE MUST BE AT LEAST 20 CHARACTERS
+            </span>
+          </div>
+
+          <!-- SUBMIT -->
+          <button
+            type="submit"
+            class="btn"
+            id="submit-btn"
+            aria-label="Submit contact form"
+          >
+            SEND_MESSAGE() →
+          </button>
+
+        </form>
+
+        <!-- Confirmation shown after successful validation -->
+        <div
+          class="form-confirmation"
+          id="form-confirmation"
+          role="status"
+          aria-live="polite"
+          aria-label="Form submitted successfully"
+        >
+          <p style="font-size: var(--text-xl); color: var(--color-success);">Yay!</p>
+          <p>MESSAGE_SENT.EXE</p>
+          <p style="color: var(--color-text-muted); font-size: var(--text-xs);">
+            THANKS FOR REACHING OUT! I'LL GET BACK TO YOU SOON.
+          </p>
+          <button
+            type="button"
+            class="btn btn--outline"
+            id="reset-btn"
+            style="margin-top: var(--space-4);"
+          >
+            SEND ANOTHER →
+          </button>
+        </div>
+
+      </div>
+
+      <aside aria-label="Contact information">
+        <div class="contact-info reveal">
+          <h2 class="section__title">INFO.TXT</h2>
+
+          <div class="contact-info__item">
+            <span class="contact-info__label">EMAIL</span>
+            <a class="contact-info__value" href="mailto:radhika.sahu@iiit.ac.in">
+            radhika.sahu@iiit.ac.in
+            </a>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__label">GITHUB</span>
+
+            <a
+              class="contact-info__value"
+              href="https://github.com/Radzzz06"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile (opens in new tab)"
+            >
+              Direct you to github.com
+            </a>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__label">LINKEDIN</span>
+            <a
+              class="contact-info__value"
+              href="https://www.linkedin.com/in/radhika-sahu-226a9b36b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile (opens in new tab)"
+            >
+              Direct you to linkedin.com
+            </a>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__label">LOCATION</span>
+            <span class="contact-info__value">IIIT HYDERABAD, TELANGANA</span>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__label">STATUS</span>
+            <span class="contact-info__value text-success">
+              ● OPEN TO OPPORTUNITIES
+            </span>
+          </div>
+
+        </div>
+      </aside>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Radhika_sahu — IIIT HYDERABAD</p>
+  </footer>
+
+  <script src="js/theme.js" type="module"></script>
+  <script src="js/contact.js" type="module"></script>
+  <script src="js/scroll.js" type="module"></script>
+
+</body>
+</html>
